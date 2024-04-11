@@ -1,0 +1,90 @@
+/* Reset de Estilos */
+
+/* Establece los valores predeterminados de los márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Normaliza la tipografía */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, blockquote, figure, figcaption, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Elimina la decoración de la lista */
+ul, ol {
+    list-style: none;
+}
+
+/* Ajusta la tipografía a un tamaño base */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Asegura que las imágenes se escalen correctamente */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Establece los elementos de formulario a un estilo uniforme */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Corrige el borde de los elementos de formulario en IE 10 y anteriores */
+button, input {
+    border: none;
+}
+
+/* Elimina el margen y el relleno del botón en Safari */
+button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+/* Corrige la mala alineación de los elementos de formulario en Chrome */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* Corrige el estilo de sobreescritura de los elementos de formulario en Edge y Safari */
+input, select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Establece un estilo predeterminado para los elementos anclados */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Corrige el relleno adicional en IE 8 */
+html {
+    padding: 0.5em;
+}
+
+/* Establece un estilo básico para los elementos de tabla */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Restaura la visualización de flexbox en IE 10 */
+.flexbox {
+    display: flex;
+}
+
+/* Restaura la visualización de grid en IE 10 */
+.grid {
+    display: grid;
+}
+    

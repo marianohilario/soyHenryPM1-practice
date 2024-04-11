@@ -1,0 +1,282 @@
+:root {
+  --color-primary: #363949;
+  --bg-color: #edeffd;
+  --shadow: rgba(132, 139, 200, 0.5);
+  --input-color: #4ba5bd;
+}
+
+.dark-mode-variables {
+  --color-primary: #edeffd;
+  --bg-color: #363949;
+  --shadow: rgba(0, 0, 0, 1);
+  --input-color: #ffc14b;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  color: var(--color-primary);
+  background-color: var(--bg-color);
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+header,
+footer {
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1rem 2rem var(--shadow);
+  margin-bottom: 3rem;
+  z-index: 100;
+}
+
+header {
+  position: fixed;
+}
+
+.header-logo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  max-height: 50px;
+}
+
+.header-switch {
+  width: 60px;
+  height: 30px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border: 2px solid var(--color-primary);
+  border-radius: 100px;
+  background-color: var(--color-primary);
+}
+
+.header-switch::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 1px var(--color-primary);
+  background-color: var(--bg-color);
+  /* left: 0;
+  right: unset; */
+  transform: translateX(-4px);
+  transition: all .3s linear;
+}
+
+.header-switch.active::before {
+  transform: translateX(25px);
+  box-shadow: none;
+  /* right: 0;
+  left: unset; */
+}
+
+.header-switch ion-icon {
+  color: var(--bg-color);
+  font-size: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+main h1 {
+  margin-bottom: 3rem;
+}
+
+.about,
+.tecnologies,
+.activities {
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1rem 2rem var(--shadow);
+  margin-bottom: 3rem;
+}
+
+.about h2,
+.tecnologies h2,
+.activities h2 {
+  margin-bottom: 2rem;
+}
+
+body::before {
+  content: "";
+  width: 30%;
+  height: calc(100% - 80px);
+  background-color: #ffc14b;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 70px;
+}
+
+.tecnologies-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tecnologies-cards-img {
+  display: flex;
+  justify-content: center;
+}
+
+.tecnologies-cards a {
+  position: relative;
+}
+
+.tecnologies-cards a p {
+  position: absolute;
+  top: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.tecnologies-cards a:hover p {
+  top: -25px;
+  z-index: 1;
+  opacity: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--svg-shadow);
+}
+
+.tecnologies-cards a svg {
+  height: 6rem;
+  transition: height 0.3s ease-out;
+}
+
+.tecnologies-cards svg:hover {
+  filter: drop-shadow(0 0 1.5rem var(--svg-shadow));
+  height: 6.5rem;
+}
+
+.activities-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.activities-form div {
+  width: 100%;
+}
+.activities-form div label {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 2px solid silver;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.activities-form div label.focus {
+  border-color: var(--input-color);
+}
+
+.activities-form div label span.focus {
+  color: var(--input-color);
+}
+
+.activities-form div label span.top {
+  left: 1rem;
+  top: -0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--bg-color);
+  padding: 0 0.4rem;
+}
+
+.activities-form div label span {
+  position: absolute;
+  color: silver;
+  top: 1rem;
+  left: 1rem;
+  transition: all 0.2s linear;
+}
+
+.activities-form div label input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: var(--input-color);
+  font-weight: bold;
+}
+
+.activities-form div label input:focus {
+  outline: none;
+}
+
+.activities-form input[type="button"] {
+  position: relative;
+  background-color: transparent;
+  width: 25%;
+  padding-block: 1rem;
+  border-radius: 2rem;
+  border: 2px solid var(--input-color);
+  color: var(--input-color);
+  font-weight: bold;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.activities-form input[type="button"]:hover {
+  background-color: var(--input-color);
+  color: var(--bg-color);
+}
+
+footer {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+.redes {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.redes svg {
+  transition: 0.2s;
+}
+
+.redes svg:hover {
+  fill: var(--clr);
+}
+
+.activities-cards {
+  margin-top: 3rem;
+  min-height: 10rem;
+  width: 100%;
+  text-align: center;
+}
