@@ -38,6 +38,7 @@ footer {
 
 header {
   position: fixed;
+  width: 1200px
 }
 
 .header-logo {
@@ -94,7 +95,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 main h1 {
