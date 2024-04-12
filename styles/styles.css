@@ -322,6 +322,6 @@ footer p {
 
 .whatsapp {
   position: fixed;
-  left: 20%;
-  bottom: 15%;
+  right: calc((100vw - 1200px) / 2);
+  top: calc((100vh - 170px));
 }
