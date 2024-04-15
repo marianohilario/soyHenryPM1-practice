@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
   --color-primary: #363949;
   --bg-color: #edeffd;
@@ -21,6 +23,7 @@ body {
   background-color: var(--bg-color);
   transition: all 0.3s linear;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
 header,
@@ -118,6 +121,9 @@ main h1 {
   margin-bottom: 3rem;
 }
 
+.about {
+  text-align: justify;
+}
 .about h2,
 .tecnologies h2,
 .activities h2 {
@@ -300,7 +306,6 @@ footer p {
   border-radius: 50%;
   position: absolute;
   animation: animate 2s linear forwards;
-  z-index: 0;
 }
 
 .spark:nth-child(even) {

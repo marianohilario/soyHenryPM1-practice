@@ -51,3 +51,36 @@ button.addEventListener('click', () => {
     }, 2000);
   }
 })
+
+class Activity {
+  constructor(id, title, description, imgUrl) {
+    this.id = id;
+    this.title = title;
+    this.description = description;
+    this.imgUrl = imgUrl;
+  }
+}
+
+class Repository {
+  constructor() {
+    this.activities = [];
+  }
+
+  getAllActivities() {
+    return this.activities;
+  }
+
+  createActivity(id, title, description, imgUrl) {
+    const newActivity = new Activity(id, title, description, imgUrl);
+    this.activities.push(newActivity);
+    this.getAllActivities();
+  }
+
+  deleteActivity(id) {
+    const activityToDeleteIndex = this.activities.findIndex((activity) => activity.id === id);
+    if (activityToDeleteIndex !== -1) {
+        this.activities.splice(activityToDeleteIndex, 1);
+    }
+    this.getAllActivities();
+  }
+}
