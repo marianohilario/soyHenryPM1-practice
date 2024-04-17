@@ -64,23 +64,23 @@ class Activity {
 class Repository {
   constructor() {
     this.activities = [];
+    this.id = 0;
   }
 
   getAllActivities() {
     return this.activities;
   }
 
-  createActivity(id, title, description, imgUrl) {
+  createActivity(title, description, imgUrl) {
+    const id = this.id++;
     const newActivity = new Activity(id, title, description, imgUrl);
     this.activities.push(newActivity);
-    this.getAllActivities();
   }
 
   deleteActivity(id) {
-    const activityToDeleteIndex = this.activities.findIndex((activity) => activity.id === id);
-    if (activityToDeleteIndex !== -1) {
-        this.activities.splice(activityToDeleteIndex, 1);
-    }
-    this.getAllActivities();
+    this.activities = this.activities.filter((activity) => {
+      return activity.id !== id;
+    })
   }
 }
+
