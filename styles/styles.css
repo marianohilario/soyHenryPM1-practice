@@ -37,13 +37,13 @@ footer {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 1rem 2rem var(--shadow);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   z-index: 100;
 }
 
 header {
   position: fixed;
-  width: 1200px
+  max-width: 1200px;
 }
 
 .header-logo {
@@ -122,8 +122,9 @@ main h1 {
 }
 
 .about {
-  text-align: justify;
+  text-align: content;
 }
+
 .about h2,
 .tecnologies h2,
 .activities h2 {
@@ -278,18 +279,76 @@ footer p {
 }
 
 .redes svg {
-  transition: 0.2s;
+  transition: all 0.2s linear;
 }
 
 .redes svg:hover {
   fill: var(--clr);
 }
 
-.activities-cards {
+.activities-cards-container {
   margin-top: 3rem;
   min-height: 10rem;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.activities-cards-container .card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 0.3rem;
+  box-shadow: 0 1rem 2rem var(--shadow);
+  transition: all .25s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.activities-cards-container .card:hover {
+  transform: scale(1.05); 
+}
+
+.activities-cards-container .card-delete {
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgba(255, 0, 0, 0.5);
+  width: 40%;
+  padding: .2rem;
+  color: white;
+  transition: all .25s linear;
+}
+
+.activities-cards-container .card-delete:hover {
+  background-color: red;
+}
+
+.activities-cards-container .card img {
+  height: 10vh;
+  margin-top: 1rem;
+  width: 90%;
+  object-fit: cover;
+}
+
+.activities-cards-container .card h4 {
+  background-color: var(--input-color);
+  color: var(--bg-color);
+  padding-bottom: .5rem;
+  padding-top: .8rem;
+  width: 100%;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.activities-cards-container .card p {
+  font-size: 0.8rem;
+  padding: 1rem;
 }
 
 #button {
@@ -327,6 +386,49 @@ footer p {
 
 .whatsapp {
   position: fixed;
-  right: calc((100vw - 1200px) / 2);
-  top: calc((100vh - 170px));
+  right: 0.5em;
+  top: calc((100vh - 150px));
+}
+
+
+@media screen and (max-width: 768px) {
+  html {
+    padding: 0;
+  }
+
+  header,
+  footer {
+    border-radius: 0px;
+    box-shadow: 0 1rem 2rem var(--shadow);
+  }
+
+  footer {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer p {
+    display: none;
+  }
+
+  .header-logo h3 {
+    display: none;
+  }
+
+  .about,
+  .tecnologies,
+  .activities {
+    width: 95%;
+  }
+
+  #button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .whatsapp {
+    right: calc((100vw - 1200px) / 2);
+  }
 }
