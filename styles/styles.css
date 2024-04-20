@@ -119,6 +119,7 @@ main h1 {
   align-items: center;
   box-shadow: 0 1rem 2rem var(--shadow);
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .about {
@@ -148,6 +149,7 @@ body::before {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .tecnologies-cards-img {
@@ -301,8 +303,8 @@ footer p {
 
 .activities-cards-container .card {
   position: relative;
-  width: 20vh;
-  height: 25vh;
+  width: 23vh;
+  height: 30vh;
   border-radius: 0.3rem;
   box-shadow: 0 1rem 2rem var(--shadow);
   transition: all .25s linear;
@@ -322,7 +324,7 @@ footer p {
   border-radius: 4px;
   background-color: rgba(255, 0, 0, 0.5);
   width: 40%;
-  height: 1rem;
+  height: 2vh;
   padding: .2rem;
   color: white;
   transition: all .25s linear;
