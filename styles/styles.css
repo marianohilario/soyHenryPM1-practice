@@ -296,6 +296,7 @@ footer p {
   justify-content: space-evenly;
   align-items: center;
   gap: 1.5rem;
+  padding: 1rem;
 }
 
 .activities-cards-container .card {
@@ -307,9 +308,9 @@ footer p {
   transition: all .25s linear;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.8rem;
 }
 
 .activities-cards-container .card:hover {
